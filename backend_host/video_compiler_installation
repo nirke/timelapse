@@ -1,0 +1,14 @@
+TIME_LAPSE_FOLDER=$HOME/time_lapse
+
+echo "Creating a folder for timelapse action"
+mkdir $TIME_LAPSE_FOLDER
+
+echo "Putting the video encoder script in the right place"
+cp make_my_timelapse_video.sh $TIME_LAPSE_FOLDER
+
+
+# Prepare encoder - Taken from:
+# https://computers.tutsplus.com/tutorials/creating-time-lapse-photography-with-a-raspberry-pi--cms-20794
+
+echo "Prepare video encoder"
+sudo apt-get install mencoder
