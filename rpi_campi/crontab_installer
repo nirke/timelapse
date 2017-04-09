@@ -1,0 +1,12 @@
+# Instructions from:
+# http://stackoverflow.com/questions/878600/how-to-create-a-cron-job-using-bash
+
+# Write the current crontab
+crontab -l > temp_cron
+
+# Echo the new cron into a file
+echo "*/5 * * * * sh $HOME/time_lapse/take_periodic_photo.sh"
+
+# Install the new cron tab
+crontab temp_cron
+rm temp_cron

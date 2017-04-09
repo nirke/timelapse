@@ -1,0 +1,16 @@
+echo "Creating time lapse folder in your HOME directory"
+mkdir $HOME/time_lapse
+
+echo "Putting CamPi script in the right place"
+cp take_periodic_photo.sh $HOME/time_lapse
+
+echo "Setting permissions for files"
+sudo chmod a+x crontab_install
+sudo chmod a+x $HOME/time_lapse/take_periodic_photo.sh
+
+echo "Installing crontab for periodic photo taking"
+./install_crontab
+
+echo "Installing tftp client"
+sudo apt-get install tftp
+./install_tftp_client
