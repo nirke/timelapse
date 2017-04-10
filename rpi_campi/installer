@@ -1,5 +1,6 @@
 echo "Creating time lapse folder in your HOME directory"
 mkdir $HOME/time_lapse
+mkdir $HOME/time_lapse/photos
 
 echo "Putting CamPi script in the right place"
 cp take_periodic_photo.sh $HOME/time_lapse
